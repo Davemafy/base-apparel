@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-Light.ttf");
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-Regular.ttf");
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+
+:root {
+    font-family:  "Josefin Sans", Inter, system-ui, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2 , h3 ,h4{
+	text-wrap: balance ;
+}
+
+body {
+    background: url(../images/bg-pattern-desktop.svg);
+    background-size:  cover;
+}
+
+@media (min-width: 640px) {
+    header{
+        background: url(../images/bg-pattern-desktop.svg);
+        background-size: 50%;
+       
+        display: grid;
+        height: 100svh;
+        grid-template-areas: 
+            "one two"
+            "three two"
+        ;
+        grid-template-columns:  1.37fr 1fr ;
+    }
+    
+     nav{
+        grid-area: one;
+    }
+
+     picture{
+        grid-area: two;
+
+        & img{
+           height: 100svh;
+           width: 100%;
+           display: block;
+           margin-left: auto;
+           object-position: top center;
+        }
+    }
+
+    header > section{
+        grid-area: three;
+    }
+}
+
+span:after{
+    content: url("../images/icon-error.svg");
+    
+    translate: 0 -50%;
+    height: fit-content;
+}
+
+.text-size{
+    font-size: clamp(0px, 1px + 5vw, 1rem);
+}
+
+.bg-gradient{
+    background: linear-gradient(135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%)), linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+}
+
+.bg-gradient:hover{
+    background: linear-gradient(135deg,  hsl(0, 80%, 95%),  hsl(0, 74%, 84%));
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; display: none; }
+.attribution a { color: hsl(228, 45%, 44%); }
+

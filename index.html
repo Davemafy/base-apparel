@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="bg-white">
+    <header class="mx-auto bg-white w-full sm:max-w-fit">
+      <nav class="p-8 sm:p-4 sm:py-[3.4rem] sm:px-[2rem]  sm:pb-0 sm:w-[32rem]  mx-auto">
+        <div class=""><img class="h-7 w-fit" src="images/logo.svg" height="120" width="120" alt="" /></div>
+      </nav>
+       <picture class="grid">
+          <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+          <img class="w-full object-cover" src="images/hero-desktop.jpg" alt="Hero Image">
+        </picture>
+      <section class="max-w-72 py-24 grid text-center sm:text-left	 gap-6 content-start sm:py-[3.4rem] sm:px-[2rem] sm:pt-10 sm:max-w-lg mx-auto"> 
+        <div class=" p-6 sm:p-0  leading-[1] text-4xl tracking-[0.8rem] uppercase">
+          <p class="font-light  sm:text-[3.3rem] text-desaturatedRed">We're</p>
+          <h1 class="text-darkGrayishRed sm:text-[3.3rem] leading-[1.12] font-semibold">coming soon</h1>
+        </div>
+        <div>
+          <p class="text-desaturatedRed text-size max-w-sm leading-[1.6] p-4">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div> 
+        <form id="form" class=" flex items-center relative rounded-full p-4 ">
+          <input id="email" class="border h-full p-4 border-desaturatedRed outline-0 rounded-full flex-[6] flex items-center justify-center px-5 placeholder:text-desaturatedRed placeholder:opacity-75 text-darkGrayishRed text-sm" placeholder="Email Address" type="email"  required/>
+          <span id="warn-icon"  class="-translate-x-20 relative hidden pt-1.5"> </span>
+          <button id="formBtn" class="p-4 px-8 absolute right-0 flex-1 grid  place-items-center  rounded-full shadow-lg  bg-gradient hover:shadow-[#ccc] transition ">
+            <img class="h-4 w-auto" src="images/icon-arrow.svg"  alt="" />
+          </button>
+          <p id="warn" class="absolute -bottom-7 px-6 text-[.75rem] text-softRed hidden">Please provide a valid email </p>
+        </form>
+      </section>
+    </header>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
